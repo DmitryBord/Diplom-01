@@ -250,7 +250,7 @@ body {
 }
 
 .menu-item-2 {
-	background: url(../image/Vebinar\ 1@2x.png) 0 center/cover no-repeat;
+	background: url(../image/Vebinar\ 1@2x.png) center center/cover no-repeat;
 	height: 600px;
 	width: 100%;
 	position: relative;
@@ -290,7 +290,7 @@ body {
 }
 
 .menu-item-2:hover {
-	background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/Vebinar\ 1@2x.png) 0 center/cover no-repeat;
+	background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/Vebinar\ 1@2x.png) center center/cover no-repeat;
 }
 
 .menu-item-3:hover {
@@ -1167,7 +1167,7 @@ body {
 
 	.menu-row {
 		display: grid;
-		grid-template-columns: minmax(160px, 364px) minmax(160px, 364px);
+		grid-template-columns: minmax(141px, 364px) minmax(141px, 364px);
 		grid-template-areas:
 			"item-1 item-2"
 			"item-3 item-3";
@@ -1671,7 +1671,6 @@ body {
 	.grid-content {
 		padding: 20px 14px 20px 0px;
 		width: 244px;
-		flex: 0 1 auto;
 	}
 
 	.grid-icon {
