@@ -1671,6 +1671,7 @@ body {
 	.grid-content {
 		padding: 20px 14px 20px 0px;
 		width: 244px;
+		flex: 0 1 auto;
 	}
 
 	.grid-icon {
