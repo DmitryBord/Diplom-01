@@ -140,6 +140,7 @@ body {
 	color: #2B3541;
 	padding: 232px 0px 0px 0px;
 	position: relative;
+	z-index: 1;
 }
 
 .main-title {
@@ -196,21 +197,20 @@ body {
 }
 
 .main-img {
-	background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	width: 464px;
 	height: 850px;
 	position: relative;
 	top: 0;
 	right: 0;
+	z-index: 0;
 }
 
 .main-img img {
 	position: absolute;
-	top: -52px;
-	right: -172px;
-	width: 985px;
-	height: 900px;
+	top: 0px;
+	right: -182px;
+	width: 996px;
+	height: 852px;
 	z-index: 0;
 }
 
@@ -242,7 +242,7 @@ body {
 }
 
 .menu-item-1 {
-	background: url(../image/maraphon@2x.png) 0 center/cover no-repeat;
+	background: url(../image/marafon.png) center center/cover no-repeat;
 	height: 600px;
 	width: 100%;
 	position: relative;
@@ -250,7 +250,7 @@ body {
 }
 
 .menu-item-2 {
-	background: url(../image/Vebinar\ 1@2x.png) center center/cover no-repeat;
+	background: url(../image/vebinar-1.png) center center/cover no-repeat;
 	height: 600px;
 	width: 100%;
 	position: relative;
@@ -258,7 +258,7 @@ body {
 }
 
 .menu-item-3 {
-	background: url(../image/Vebinar\ 2@2x.png) 0 center/cover no-repeat;
+	background: url(../image/vebinar-2.png) center center/cover no-repeat;
 	height: 600px;
 	width: 100%;
 	position: relative;
@@ -286,15 +286,15 @@ body {
 }
 
 .menu-item-1:hover {
-	background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/maraphon@2x.png) 0 center/cover no-repeat;
+	background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/marafon.png) center center/cover no-repeat;
 }
 
 .menu-item-2:hover {
-	background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/Vebinar\ 1@2x.png) center center/cover no-repeat;
+	background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/vebinar-1.png) center center/cover no-repeat;
 }
 
 .menu-item-3:hover {
-	background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/Vebinar\ 2@2x.png) 0 center/cover no-repeat;
+	background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/vebinar-2.png) center center/cover no-repeat;
 }
 
 .menu-content {
@@ -431,11 +431,13 @@ body {
 .grid-item-3 {
 	grid-area: item-3;
 	border: 1px solid #2B3541;
+
 }
 
 .grid-item-4 {
 	grid-area: item-4;
 	border: 1px solid #2B3541;
+	background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
 }
 
 .grid-item-5 {
@@ -454,10 +456,7 @@ body {
 .grid-item-4:hover,
 .grid-item-5:hover,
 .grid-item-6:hover {
-	background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
-	opacity: 0.7;
 	box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);
-	border: transparent;
 	cursor: pointer;
 }
 
@@ -881,8 +880,10 @@ body {
 	background-color: #F3F3F3;
 	position: absolute;
 	top: -600px;
-	left: 12%;
-	width: 76%;
+	max-width: 500px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 	box-sizing: border-box;
 	transition: .5s;
 	z-index: 2;
@@ -986,9 +987,7 @@ body {
 /* Responsive */
 
 @media (max-width:1200px) {
-	.container {
-		max-width: 1020px;
-	}
+
 
 	.header-nav {
 		flex: 0 0 auto;
@@ -1010,7 +1009,7 @@ body {
 
 	.main-img img {
 		top: 41px;
-		right: 0px;
+		right: -20px;
 		width: 484px;
 		height: 509px;
 	}
@@ -1043,16 +1042,36 @@ body {
 		left: 15px;
 	}
 
+	.menu-row {
+		gap: 10px;
+	}
+
+	.menu-date {
+		font-size: 12px;
+		margin: 0px 0px 12px 0px;
+	}
+
+	.menu-subtitle {
+		font-size: 16px;
+		max-width: 135px;
+	}
+
+	.menu-btn {
+		font-size: 12px;
+		width: 87px;
+		padding: 6px 0px;
+	}
+
 	.menu-item-1 {
-		height: 500px;
+		height: 375px;
 	}
 
 	.menu-item-2 {
-		height: 500px;
+		height: 375px;
 	}
 
 	.menu-item-3 {
-		height: 500px;
+		height: 375px;
 	}
 
 	.menu-titile {
@@ -1099,10 +1118,6 @@ body {
 }
 
 @media (max-width: 993px) {
-	.container {
-		max-width: 748px;
-		padding: 0px 9px;
-	}
 
 	.header-nav {
 		display: none;
@@ -1166,48 +1181,12 @@ body {
 		margin-bottom: 61px;
 	}
 
-	.menu-row {
-		display: grid;
-		grid-template-columns: minmax(141px, 364px) minmax(141px, 364px);
-		grid-template-areas:
-			"item-1 item-2"
-			"item-3 item-3";
-		gap: 11px 20px;
-	}
-
-	.menu-item-1 {
-		grid-area: item-1;
-	}
-
-	.menu-item-2 {
-		grid-area: item-2;
-	}
-
-	.menu-item-3 {
-		grid-area: item-3;
+	.menu-content {
+		padding: 17px 0px 0px 19px;
 	}
 
 	.menu-titile {
 		font-size: 26px;
-	}
-
-
-	.menu-btn {
-		left: 0;
-	}
-
-	.menu-item-1::after,
-	.menu-item-2::after,
-	.menu-item-3::after {
-		content: "";
-		background: url(../image/Vector.svg) center center/14px 14px no-repeat;
-		width: 30px;
-		height: 30px;
-		background-color: #2B3541;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		cursor: pointer;
 	}
 
 	.menu-header-row {
@@ -1425,7 +1404,16 @@ body {
 	}
 }
 
+@media (min-width:770px) {
+	.main-img img:nth-child(2) {
+		display: none;
+	}
+}
+
 @media (max-width:769px) {
+	.container {
+		padding: 0px 10px;
+	}
 
 	.header-IN {
 		width: 26px;
@@ -1454,8 +1442,51 @@ body {
 		top: -3px;
 	}
 
-	.menu-titile {
-		margin: 0px 0px 20px 0px;
+	.main-img img:nth-child(1) {
+		display: none;
+	}
+
+	.main-img img:nth-child(2) {
+		top: 0px;
+		width: 442px;
+		height: 429px;
+	}
+
+
+	.menu-row {
+		display: grid;
+		grid-template-columns: minmax(141px, 364px) minmax(141px, 364px);
+		grid-template-areas:
+			"item-1 item-2"
+			"item-3 item-3";
+		gap: 11px 20px;
+	}
+
+	.menu-item-1 {
+		grid-area: item-1;
+		background: url(../image/marafon-748.png) center center/cover no-repeat;
+	}
+
+	.menu-item-2 {
+		background: url(../image/vebinar-1-748.png) center center/cover no-repeat;
+		grid-area: item-2;
+	}
+
+	.menu-item-3 {
+		background: url(../image/vebinar-2-748.png) center center/cover no-repeat;
+		grid-area: item-3;
+	}
+
+	.menu-item-1:hover {
+		background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/marafon-748.png) center center/cover no-repeat;
+	}
+
+	.menu-item-2:hover {
+		background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/vebinar-1-748.png) center center/cover no-repeat;
+	}
+
+	.menu-item-3:hover {
+		background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/vebinar-2-748.png) center center/cover no-repeat;
 	}
 
 	.menu-item-1 {
@@ -1467,32 +1498,29 @@ body {
 	}
 
 	.menu-item-3 {
-		background: url(../image/Vebinar\ 2@2x.png) 0 25%/cover no-repeat;
 		height: 336px;
 	}
 
-	.menu-item-3:hover {
-		background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/Vebinar\ 2@2x.png) 0 25%/cover no-repeat;
-	}
-
-	.menu-date {
-		font-size: 12px;
-		margin: 0px 0px 12px 0px;
-	}
-
-	.menu-subtitle {
-		font-size: 16px;
-		max-width: 132px;
+	.menu-item-1::after,
+	.menu-item-2::after,
+	.menu-item-3::after {
+		content: "";
+		background: url(../image/Vector.svg) center center/14px 14px no-repeat;
+		width: 30px;
+		height: 30px;
+		background-color: #2B3541;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		cursor: pointer;
 	}
 
 	.menu-btn {
-		font-size: 12px;
-		width: 87px;
-		padding: 6px 0px;
+		left: 0;
 	}
 
-	.menu-content {
-		padding: 17px 0px 0px 19px;
+	.menu-titile {
+		margin: 0px 0px 20px 0px;
 	}
 
 	.menu-header-row {
@@ -1545,16 +1573,6 @@ body {
 		font-size: 24px;
 	}
 
-	.main-img {
-		width: 359px;
-		height: 379px;
-	}
-
-	.main-img img {
-		width: 349px;
-		height: 314px;
-	}
-
 	.btn-arrow {
 		bottom: -10px;
 	}
@@ -1575,6 +1593,11 @@ body {
 	}
 }
 
+@media (min-width:570px) {
+	.main-img img:nth-child(3) {
+		display: none;
+	}
+}
 
 @media (max-width:569px) {
 	.main-row {
@@ -1585,6 +1608,7 @@ body {
 
 	.main-item {
 		align-self: center;
+		max-width: none;
 	}
 
 	.main-title {
@@ -1611,16 +1635,22 @@ body {
 	}
 
 	.main-img {
-		width: 340px;
+		width: 100%;
 		height: 220px;
 		top: 42px;
 		align-self: center;
 	}
 
-	.main-img img {
-		width: 340px;
-		height: 307px;
-		top: -88px;
+
+	.main-img img:nth-child(2) {
+		display: none;
+	}
+
+	.main-img img:nth-child(3) {
+		width: 540px;
+		height: 385px;
+		top: -64px;
+		right: -2px;
 	}
 
 	.main {
@@ -1630,6 +1660,33 @@ body {
 
 	.menu-row {
 		gap: 10px 10px;
+	}
+
+	.menu-item-1 {
+		grid-area: item-1;
+		background: url(../image/marafon-360.png) 0 0/cover no-repeat;
+	}
+
+	.menu-item-2 {
+		background: url(../image/vebinar-1-360.png) 0 0/cover no-repeat;
+		grid-area: item-2;
+	}
+
+	.menu-item-3 {
+		background: url(../image/vebinar-2-360.png) 0 0/cover no-repeat;
+		grid-area: item-3;
+	}
+
+	.menu-item-1:hover {
+		background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/marafon-360.png) 0 0/cover no-repeat;
+	}
+
+	.menu-item-2:hover {
+		background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/vebinar-1-360.png) 0 0/cover no-repeat;
+	}
+
+	.menu-item-3:hover {
+		background: linear-gradient(180deg, #FBF138 -100%, rgba(253, 249, 182, 0) 100%), url(../image/vebinar-2-360.png) 0 0/cover no-repeat;
 	}
 
 	.menu-push {
@@ -1670,8 +1727,9 @@ body {
 	}
 
 	.grid-content {
-		padding: 20px 14px 20px 0px;
+		padding: 20px 20px 20px 0px;
 		width: 244px;
+		flex: 1 1 auto;
 	}
 
 	.grid-icon {
@@ -1699,6 +1757,7 @@ body {
 
 	.page-text {
 		margin: 16px 0px 28px 0px;
+		width: auto;
 	}
 
 
@@ -1710,6 +1769,14 @@ body {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr 1fr;
 		gap: 40px;
+	}
+
+	.about-text {
+		width: auto;
+	}
+
+	.about-item {
+		max-width: none;
 	}
 
 	.about-page {
@@ -1750,6 +1817,29 @@ body {
 	}
 }
 
+@media (max-width:428px) {
+	.main-item {
+		max-width: 359px;
+	}
+
+	.main-img {
+		width: 340px;
+	}
+
+	.main-img img:nth-child(3) {
+		width: 340px;
+		height: 307px;
+	}
+
+	.page-text {
+		width: 340px;
+	}
+
+	.about-text {
+		width: 229px;
+	}
+}
+
 @media (max-width:375px) {
 	.main-title {
 		font-size: 24px;
@@ -1759,6 +1849,10 @@ body {
 		display: block;
 		width: 100%;
 		padding: 22px 0px;
+	}
+
+	.main-img img:nth-child(3) {
+		height: 292px;
 	}
 
 }
