@@ -1849,7 +1849,7 @@ body {
 
 @media (max-width:375px) {
 	.main-title {
-		font-size: 24px;
+		font-size: 23px;
 	}
 
 	.page-btn {
@@ -1860,6 +1860,10 @@ body {
 
 	.main-img img:nth-child(3) {
 		height: 292px;
+	}
+
+	.main-btn {
+		font-size: 16px;
 	}
 
 }
