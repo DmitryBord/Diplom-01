@@ -646,6 +646,10 @@ body {
 	color: #2B3541;
 }
 
+.agree-link:hover {
+	color: rgba(43, 53, 65, 1);
+}
+
 
 .about {
 	color: #2B3541;
@@ -846,7 +850,7 @@ body {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 150%;
-	opacity: 0.3;
+	opacity: .3;
 	color: #2B3541;
 }
 
@@ -856,8 +860,7 @@ body {
 }
 
 .decor:hover {
-	background-color: transparent;
-	opacity: 1;
+	color: rgba(43, 53, 65, 1);
 }
 
 /* Modal burger */
@@ -1577,7 +1580,12 @@ body {
 	}
 
 	.main-subtitle {
+		margin: 72px 0px 17px 0px;
 		font-size: 24px;
+	}
+
+	.main-btn {
+		font-size: 12px;
 	}
 
 	.btn-arrow {
@@ -1825,16 +1833,8 @@ body {
 }
 
 @media (max-width:428px) {
-	.main-item {
-		max-width: 359px;
-	}
-
-	.main-img {
-		width: 340px;
-	}
 
 	.main-img img:nth-child(3) {
-		width: 340px;
 		height: 307px;
 	}
 
